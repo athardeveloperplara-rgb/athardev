@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtharDeveloper - Jasa Pembuatan Website & Aplikasi Profesional</title>
+    <meta name="description" content="AtharDeveloper adalah mitra digital Anda untuk pembuatan website dan aplikasi mobile dengan kualitas terbaik dan profesional.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind Config for Custom Colors/Fonts -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            900: '#1e3a8a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        /* Custom Styles for extra polish */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(229, 231, 235, 0.5);
+        }
+        .blob {
+            position: absolute;
+            filter: blur(80px);
+            z-index: -1;
+            opacity: 0.4;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 bg-slate-50 antialiased selection:bg-brand-500 selection:text-white">
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                  </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#beranda" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Beranda</a>
+                    <a href="#layanan" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Layanan</a>
+                    <a href="#portofolio" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Portofolio</a>
+                    <a href="#testimoni" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Testimoni</a>
+                    <a href="#kontak" class="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2.5 rounded-full font-medium transition-all shadow-lg shadow-brand-500/30 hover:shadow-brand-500/50 transform hover:-translate-y-0.5">
+                        Konsultasi Gratis
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-brand-600 focus:outline-none p-2">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 absolute w-full shadow-xl">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#beranda" class="block px-3 py-3 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">Beranda</a>
+                <a href="#layanan" class="block px-3 py-3 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">Layanan</a>
+                <a href="#portofolio" class="block px-3 py-3 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">Portofolio</a>
+                <a href="#testimoni" class="block px-3 py-3 text-base font-medium text-slate-700 hover:text-brand-600 hover:bg-slate-50 rounded-lg">Testimoni</a>
+                <a href="#kontak" class="block mt-4 text-center bg-brand-600 text-white px-5 py-3 rounded-xl font-medium shadow-md">Konsultasi Sekarang</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="beranda" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <!-- Background Decorations -->
+        <div class="blob bg-brand-200 w-96 h-96 rounded-full top-0 left-[-100px]"></div>
+        <div class="blob bg-blue-200 w-[500px] h-[500px] rounded-full bottom-[-100px] right-[-100px]"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-16 items-center">
+                
+                <!-- Hero Text -->
+                <div class="lg:col-span-6 text-center lg:text-left mb-12 lg:mb-0">
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-50 border border-brand-100 text-brand-600 font-medium text-sm mb-6">
+                        <span class="relative flex h-2.5 w-2.5">
+                          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
+                          <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-brand-500"></span>
+                        </span>
+                        Tersedia untuk proyek baru
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 leading-tight mb-6 tracking-tight">
+                        Wujudkan Visi Digital Bersama <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-600 to-blue-400">AtharDeveloper</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-slate-600 mb-8 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        Kami adalah spesialis pembuatan Website dan Aplikasi Mobile yang dirancang untuk meningkatkan skala bisnis Anda dengan desain profesional dan performa maksimal.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#portofolio" class="px-8 py-4 bg-slate-900 hover:bg-slate-800 text-white rounded-xl font-semibold transition-all shadow-lg shadow-slate-900/20 text-center flex items-center justify-center gap-2">
+                            Lihat Portofolio <i class="fas fa-arrow-right text-sm"></i>
+                        </a>
+                        <a href="#kontak" class="px-8 py-4 bg-white border border-slate-200 hover:border-brand-500 hover:text-brand-600 text-slate-700 rounded-xl font-semibold transition-all text-center">
+                            Hubungi Kami
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image/Graphic -->
+                <div class="lg:col-span-6 relative">
+                    <div class="relative rounded-2xl overflow-hidden shadow-2xl shadow-brand-900/10 border border-white/50 bg-white/30 backdrop-blur-sm p-2">
+                        <!-- Kompilasi gambar portofolio sebagai hero banner -->
+                        <div class="grid grid-cols-2 gap-2 rounded-xl overflow-hidden bg-slate-100">
+                            <img src="portofolio1.png" alt="Barber App" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x300/e2e8f0/475569?text=App+Preview+1'">
+                            <div class="grid grid-rows-2 gap-2">
+                                <img src="portofolio2.png" alt="School App" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x150/e2e8f0/475569?text=App+Preview+2'">
+                                <img src="portofolio3.png" alt="POS App" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" onerror="this.src='https://placehold.co/400x150/e2e8f0/475569?text=App+Preview+3'">
+                            </div>
+                        </div>
+                        
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-xl border border-slate-100 flex items-center gap-4 animate-bounce" style="animation-duration: 3s;">
+                            <div class="bg-green-100 p-3 rounded-full text-green-600">
+                                <i class="fas fa-check-circle text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-slate-500 font-medium">Kualitas</p>
+                                <p class="text-slate-900 font-bold">Terjamin 100%</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="layanan" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-brand-600 font-semibold tracking-wide uppercase text-sm mb-2">Layanan Kami</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Solusi Digital Komprehensif</h3>
+                <p class="text-lg text-slate-600">Dari ide hingga peluncuran, kami menangani seluruh proses pengembangan produk digital Anda.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Service 1: Website -->
+                <div class="group bg-slate-50 rounded-3xl p-8 lg:p-10 transition-all duration-300 hover:bg-white hover:shadow-2xl hover:shadow-slate-200/50 border border-transparent hover:border-slate-100">
+                    <div class="w-16 h-16 bg-brand-100 text-brand-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-4">Pembuatan Website</h4>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Kami membangun website modern yang responsif, cepat, dan SEO-friendly. Cocok untuk Company Profile, Toko Online (E-commerce), Landing Page, atau sistem web khusus.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-slate-700 gap-3"><i class="fas fa-check text-brand-500"></i> Desain UI/UX Menarik</li>
+                        <li class="flex items-center text-slate-700 gap-3"><i class="fas fa-check text-brand-500"></i> Optimasi Kecepatan & SEO</li>
+                        <li class="flex items-center text-slate-700 gap-3"><i class="fas fa-check text-brand-500"></i> Sistem Manajemen Konten (CMS)</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2: Aplikasi -->
+                <div class="group bg-slate-50 rounded-3xl p-8 lg:p-10 transition-all duration-300 hover:bg-white hover:shadow-2xl hover:shadow-slate-200/50 border border-transparent hover:border-slate-100">
+                    <div class="w-16 h-16 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center text-3xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                        <i class="fas fa-mobile-screen-button"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-slate-900 mb-4">Pengembangan Aplikasi</h4>
+                    <p class="text-slate-600 mb-6 leading-relaxed">
+                        Ubah ide brilian Anda menjadi aplikasi mobile nyata. Kami mengembangkan aplikasi Android dan iOS yang intuitif, stabil, dan berkinerja tinggi untuk berbagai kebutuhan bisnis.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-slate-700 gap-3"><i class="fas fa-check text-indigo-500"></i> Native & Cross-Platform</li>
+                        <li class="flex items-center text-slate-700 gap-3"><i class="fas fa-check text-indigo-500"></i> Integrasi API & Database</li>
+                        <li class="flex items-center text-slate-700 gap-3"><i class="fas fa-check text-indigo-500"></i> Publikasi ke Play Store & App Store</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="portofolio" class="py-24 bg-slate-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+                <div class="max-w-2xl">
+                    <h2 class="text-brand-400 font-semibold tracking-wide uppercase text-sm mb-2">Karya Kami</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-white mb-4">Portofolio Terbaik AtharDeveloper</h3>
+                    <p class="text-slate-400 text-lg">Beberapa hasil karya pengembangan sistem dan aplikasi yang telah membantu klien kami mendigitalisasi bisnis mereka.</p>
+                </div>
+                <a href="#kontak" class="hidden md:inline-flex items-center gap-2 text-brand-400 hover:text-white font-medium transition-colors group">
+                    Mulai Proyek Anda <i class="fas fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                </a>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="grid lg:grid-cols-3 gap-8">
+                
+                <!-- Project 1: BarberPro -->
+                <div class="group rounded-2xl overflow-hidden bg-slate-800 border border-slate-700 hover:border-brand-500 transition-all duration-300">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img src="portofolio1.png" alt="BarberPro - Aplikasi Barbershop" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://placehold.co/600x400/1e293b/94a3b8?text=Portofolio+1'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute bottom-4 left-4 flex gap-2">
+                            <span class="px-3 py-1 text-xs font-semibold bg-brand-500/20 text-brand-300 backdrop-blur-md rounded-full border border-brand-500/30">Mobile App</span>
+                            <span class="px-3 py-1 text-xs font-semibold bg-white/10 text-white backdrop-blur-md rounded-full border border-white/20">Dashboard</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-white mb-2">BarberPro System</h4>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-3">Aplikasi manajemen barbershop multi-cabang yang terintegrasi. Memudahkan pemilik mengelola booking online, jadwal karyawan, laporan keuangan real-time, dan manajemen stok di berbagai lokasi cabang.</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-sm text-brand-400 hover:text-brand-300 font-medium">
+                            Detail Proyek <i class="fas fa-external-link-alt text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: SmartSchool -->
+                <div class="group rounded-2xl overflow-hidden bg-slate-800 border border-slate-700 hover:border-brand-500 transition-all duration-300">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img src="portofolio2.png" alt="SmartSchool - Manajemen Sekolah" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://placehold.co/600x400/1e293b/94a3b8?text=Portofolio+2'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute bottom-4 left-4 flex gap-2">
+                            <span class="px-3 py-1 text-xs font-semibold bg-indigo-500/20 text-indigo-300 backdrop-blur-md rounded-full border border-indigo-500/30">Web System</span>
+                            <span class="px-3 py-1 text-xs font-semibold bg-white/10 text-white backdrop-blur-md rounded-full border border-white/20">Portal App</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-white mb-2">SmartSchool App</h4>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-3">Sistem informasi manajemen sekolah yang komprehensif. Menghubungkan kepala sekolah, guru, siswa, dan orang tua dalam satu platform. Fitur mencakup absensi, input nilai, jadwal, dan e-learning.</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-sm text-brand-400 hover:text-brand-300 font-medium">
+                            Detail Proyek <i class="fas fa-external-link-alt text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Smart POS -->
+                <div class="group rounded-2xl overflow-hidden bg-slate-800 border border-slate-700 hover:border-brand-500 transition-all duration-300">
+                    <div class="relative overflow-hidden aspect-[4/3]">
+                        <img src="portofolio3.png" alt="Smart POS - Sistem Kasir" class="w-full h-full object-cover object-top transform group-hover:scale-105 transition-transform duration-700" onerror="this.src='https://placehold.co/600x400/1e293b/94a3b8?text=Portofolio+3'">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent opacity-80"></div>
+                        <div class="absolute bottom-4 left-4 flex gap-2">
+                            <span class="px-3 py-1 text-xs font-semibold bg-green-500/20 text-green-300 backdrop-blur-md rounded-full border border-green-500/30">Tablet App</span>
+                            <span class="px-3 py-1 text-xs font-semibold bg-white/10 text-white backdrop-blur-md rounded-full border border-white/20">POS System</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold text-white mb-2">Smart POS Restaurant</h4>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-3">Aplikasi Point of Sales (Kasir) modern yang dirancang khusus untuk bisnis F&B dan restoran. Mengelola pesanan, manajemen meja, stok inventori resep, hingga cetak struk dengan mudah dan cepat.</p>
+                        <a href="#" class="inline-flex items-center gap-2 text-sm text-brand-400 hover:text-brand-300 font-medium">
+                            Detail Proyek <i class="fas fa-external-link-alt text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="mt-12 text-center md:hidden">
+                <a href="#kontak" class="inline-flex items-center justify-center w-full px-6 py-3 bg-brand-600 text-white rounded-xl font-medium">
+                    Mulai Proyek Anda Sekarang
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimoni" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-brand-600 font-semibold tracking-wide uppercase text-sm mb-2">Ulasan Klien</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Dipercaya oleh Pebisnis Indonesia</h3>
+                <p class="text-lg text-slate-600">Kepuasan klien adalah prioritas utama kami. Berikut apa yang mereka katakan tentang hasil kerja AtharDeveloper.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Testimoni 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg shadow-slate-200/50 relative">
+                    <i class="fas fa-quote-right absolute top-8 right-8 text-4xl text-slate-100"></i>
+                    <div class="flex text-yellow-400 mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-slate-700 italic mb-6 relative z-10">
+                        "Pembuatan aplikasi manajemen barbershop kami dieksekusi dengan sangat sempurna oleh tim AtharDeveloper. Fitur booking onlinenya sangat lancar dan desainnya elegan. Pengerjaannya juga on-time!"
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-brand-100 flex items-center justify-center text-brand-600 font-bold text-lg">
+                            BS
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-slate-900">Budi Santoso</h5>
+                            <p class="text-sm text-slate-500">Owner, The Gentlemen Barber</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimoni 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg shadow-slate-200/50 relative border border-brand-100 transform md:-translate-y-4">
+                    <i class="fas fa-quote-right absolute top-8 right-8 text-4xl text-slate-100"></i>
+                    <div class="flex text-yellow-400 mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-slate-700 italic mb-6 relative z-10">
+                        "Sistem SmartSchool sangat membantu digitalisasi administrasi di sekolah kami. Dari tadinya manual sekarang semua terintegrasi. Timnya sangat responsif jika ada penyesuaian fitur. Terima kasih mas Athar!"
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 font-bold text-lg">
+                            SA
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-slate-900">Siti Aminah, S.Pd</h5>
+                            <p class="text-sm text-slate-500">Kepala Sekolah, SMK Al-Basyry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimoni 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-lg shadow-slate-200/50 relative">
+                    <i class="fas fa-quote-right absolute top-8 right-8 text-4xl text-slate-100"></i>
+                    <div class="flex text-yellow-400 mb-4 text-sm">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-slate-700 italic mb-6 relative z-10">
+                        "Aplikasi kasir (POS) restoran yang dibuat sangat user-friendly. Karyawan saya gampang belajarnya. Laporannya detail dan bisa diakses dari HP saya kapan saja. Sangat direkomendasikan untuk pebisnis kuliner."
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 font-bold text-lg">
+                            AP
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-slate-900">Agus Pratama</h5>
+                            <p class="text-sm text-slate-500">Founder, Resto Nusantara</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak" class="relative py-20 overflow-hidden">
+        <div class="absolute inset-0 bg-brand-600"></div>
+        <!-- Decorative pattern -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 32px 32px;"></div>
+        
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Siap Mengubah Ide Menjadi Kenyataan?</h2>
+            <p class="text-brand-100 text-lg mb-10 max-w-2xl mx-auto">
+                Diskusikan kebutuhan website atau aplikasi Anda bersama tim ahli kami. Kami siap memberikan solusi digital terbaik untuk bisnis Anda.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://wa.me/6285779281766" target="_blank" class="px-8 py-4 bg-white text-brand-600 hover:bg-slate-50 rounded-xl font-bold transition-all shadow-xl flex items-center justify-center gap-3 transform hover:scale-105">
+                    <i class="fab fa-whatsapp text-xl text-green-500"></i> Hubungi WhatsApp
+                </a>
+                <a href="mailto:admin@athardeveloper.com" class="px-8 py-4 bg-transparent border-2 border-white/30 text-white hover:bg-white/10 rounded-xl font-bold transition-all flex items-center justify-center gap-3">
+                    <i class="far fa-envelope text-xl"></i> Kirim Email
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-950 pt-16 pb-8 border-t border-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="md:col-span-2">
+                       <p class="text-slate-400 mb-6 max-w-sm">
+                        AtharDeveloper adalah agensi kreatif yang berfokus pada pembuatan website modern dan pengembangan aplikasi mobile yang berdampak tinggi.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-brand-600 hover:text-white transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-brand-600 hover:text-white transition-colors">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-slate-400 hover:bg-brand-600 hover:text-white transition-colors">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Navigasi</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#beranda" class="text-slate-400 hover:text-brand-400 transition-colors">Beranda</a></li>
+                        <li><a href="#layanan" class="text-slate-400 hover:text-brand-400 transition-colors">Layanan</a></li>
+                        <li><a href="#portofolio" class="text-slate-400 hover:text-brand-400 transition-colors">Portofolio</a></li>
+                        <li><a href="#testimoni" class="text-slate-400 hover:text-brand-400 transition-colors">Testimoni</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 uppercase tracking-wider text-sm">Layanan</h4>
+                    <ul class="space-y-3">
+                        <li class="text-slate-400">Company Profile</li>
+                        <li class="text-slate-400">Website E-Commerce</li>
+                        <li class="text-slate-400">Sistem Informasi</li>
+                        <li class="text-slate-400">Aplikasi Android & iOS</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-slate-500 text-sm text-center md:text-left">
+                    &copy; 2026 AtharDeveloper. Hak Cipta Dilindungi.
+                </p>
+                <div class="text-slate-500 text-sm flex gap-4">
+                    <a href="#" class="hover:text-white transition-colors">Kebijakan Privasi</a>
+                    <a href="#" class="hover:text-white transition-colors">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Script untuk mengatur efek Navbar saat scroll
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.replace('py-4', 'py-0');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.replace('py-0', 'py-4');
+            }
+        });
+
+        // Script untuk toggle Mobile Menu
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+            if(menu.classList.contains('hidden')){
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            }
+        });
+
+        // Tutup menu mobile saat link diklik
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+    </script>
+</body>
+</html>
